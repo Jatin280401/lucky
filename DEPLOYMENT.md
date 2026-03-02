@@ -60,7 +60,7 @@ git push -u origin main
    | Name | Value |
    |------|-------|
    | `DATABASE_URL` | Neon **pooled** connection (host has `-pooler`) |
-   | `DIRECT_URL` | Neon **direct** connection (same URL but remove `-pooler` from host) |
+   | `DIRECT_URL` | Neon **direct** connection (same URL but remove `-pooler` from host). Add `&connect_timeout=30` for cold starts. |
    | `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` | From Clerk dashboard |
    | `CLERK_SECRET_KEY` | From Clerk dashboard |
    | `NEXT_PUBLIC_CLERK_SIGN_IN_URL` | `/login` |
