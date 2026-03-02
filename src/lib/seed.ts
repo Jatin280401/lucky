@@ -1,6 +1,12 @@
 import { prisma } from "./db";
 
 export async function runSeed() {
+  // Skip if database already has data (preserves admin edits on redeploy)
+  const configCount = await prisma.siteConfig.count();
+  if (configCount > 0) {
+    return;
+  }
+
   const configs = [
     { key: "site_name", value: "A1-SATTA" },
     { key: "tagline", value: "DELHI BAZAR SATTA CHART 2026" },

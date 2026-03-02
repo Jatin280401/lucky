@@ -72,9 +72,9 @@ git push -u origin main
 
 ---
 
-## Step 6: Seed the Database (One-Time)
+## Step 6: Database Seed (Automatic)
 
-After your first deploy, **visit** `https://your-app.vercel.app/api/seed` in your browser. This populates the database with default content. It only runs if the database is empty.
+The database is seeded automatically during the build. On first deploy, default content is populated. On later deploys, existing data is preserved (admin edits are kept).
 
 ---
 
