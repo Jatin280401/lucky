@@ -31,17 +31,18 @@ export default async function LoginPage({
           <SignIn
             forceRedirectUrl="/admin"
             appearance={{
-            elements: {
-              rootBox: "mx-auto",
-            },
-            variables: {
-              colorPrimary: "#22c55e",
-              colorBackground: "#1e293b",
-              colorInputBackground: "#0f172a",
-              colorInputText: "#f8fafc",
-            },
-          }}
-        />
+              elements: {
+                rootBox: "mx-auto",
+              },
+              variables: {
+                colorPrimary: "#22c55e",
+                colorBackground: "#1e293b",
+                colorInputBackground: "#0f172a",
+                colorInputText: "#f8fafc",
+              },
+            }}
+          />
+        </div>
       </main>
       <Footer
         disclaimer={config.disclaimer}
