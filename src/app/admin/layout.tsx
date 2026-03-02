@@ -19,9 +19,13 @@ export default async function AdminLayout({
   if (!userId) {
     redirect("/login");
   }
+  // Admin-only: Only users in ADMIN_USER_IDS can access. Must be configured.
   const adminIds = (process.env.ADMIN_USER_IDS || "").split(",").map((id) => id.trim()).filter(Boolean);
-  if (adminIds.length > 0 && !adminIds.includes(userId)) {
-    redirect("/");
+  if (adminIds.length === 0) {
+    redirect("/login?error=admin_not_configured");
+  }
+  if (!adminIds.includes(userId)) {
+    redirect("/login?error=unauthorized");
   }
 
   return (
