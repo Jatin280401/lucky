@@ -59,7 +59,8 @@ git push -u origin main
 
    | Name | Value |
    |------|-------|
-   | `DATABASE_URL` | Your Neon connection string |
+   | `DATABASE_URL` | Neon **pooled** connection (host has `-pooler`) |
+   | `DIRECT_URL` | Neon **direct** connection (same URL but remove `-pooler` from host) |
    | `NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY` | From Clerk dashboard |
    | `CLERK_SECRET_KEY` | From Clerk dashboard |
    | `NEXT_PUBLIC_CLERK_SIGN_IN_URL` | `/login` |
